@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.container {
+    margin: auto;
+    border: 2px solid gold;
+    width: auto;
+    height: auto;
+}
+header {
+    background-color:  gold;
+    border: 2px gold;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    background-color:black;
+    border: 2px gold;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    border: 2px gold;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+
+.Content {
+    border: 2px gold;
+    background-color: rgb(94, 228, 110);
+    height: auto;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainContent {
+    background-color: rgb(31, 210, 223);
+    height: auto;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: gray;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
