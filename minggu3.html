@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Praktikum Pemograman Web Minggu 3</title>
+    </head>
+    <body id="body">
+        <label for="tema"> <b>Pilih jenis tema yang anda inginkan : </b></label>
+        <select class="selectcolor" id="warna" onchange="ubahwarna()">
+        <option value="">select</option>
+        <option value="black">Hitam</option>
+        <option value="white">putih</option>
+        <option value="blue">biru</option>
+        <option value="green">hijau</option>
+    </select>
+    <div class="tema">
+        <script>
+            function ubahwarna(){
+                var color = document.getElementById('warna');
+                if (warna.value=="black"){
+                    document.body.style.backgroundColor ="black";
+                }else if(warna.value=="white"){
+                    document.body.style.backgroundColor ="white";
+                }else if(warna.value=="blue"){
+                    document.body.style.backgroundColor ="blue";
+                }else if(warna.value=="green"){
+                    document.body.style.backgroundColor ="green";
+                }
+            }
+        </script>
+    </div>
+    <h1><b>THIS IS MY WEBSITE</b></h1>
+    <LABEl for="Cuaca"><b>Pilih jenis cuaca hari ini :</b> </LABEl>
+    <select name="Cuaca" id="Cuaca" onchange="Cuacahariini()">
+    <option value="">select</option>
+    <option value="Hujan">Hujan</option>
+    <option value="Salju">Salju</option>
+    <option value="Cerah">Cerah</option>
+    </select>
+    <p id="tampil"></p>
+    <div class="Cuaca">
+        <script>
+            function Cuacahariini(){
+                var Cuaca=document.getElementById("Cuaca");
+                if (Cuaca.value=="Hujan"){
+                    var Cuaca=document.getElementById("tampil");
+                    Cuaca.innerText = "Diluar hujan,jangan lupa membawa payung";
+                }else if (Cuaca.value=="Salju") {
+                    var Cuaca=document.getElementById("tampil");
+                    Cuaca.innerText = "Diluar salju,jangan lupa memakai jaket";
+                }else if(Cuaca.value=="Cerah"){
+                    var Cuaca=document.getElementById("tampil");
+                    Cuaca.innerText = "Semoga harimu menyenangkan";
+                }
+            }
+        </script>
+    </div>
+    <div class="faktorial">
+        <p><b> angka yang ingin anda hitung faktorialnya</b></p>
+        <form>
+            <input type="text" name="" id="input">
+            <button id="button"><b> Get Factorial </b></button>
+            <div id="coba"></div>
+        </form>
+        <script>
+            var input = document.getElementById("input")
+            var button = document.getElementById("button")
+            var coba = document.getElementById("coba")
+            button.addEventListener("click",function(num){
+                num.preventDefault();
+                var jum = input.value;
+                var hasil = 1 ;
+                for (var i=jum; i>0; i--){
+                    hasil *=i;
+                }
+                coba.innerHTML = `hasil faktorialnya adalah : ${hasil}`;
+            })
+        </script>
+    </div>
+    </body>
+</html>
