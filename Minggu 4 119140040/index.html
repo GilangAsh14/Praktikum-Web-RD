@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>Praktikum Minggu 4</title>
+    <head>
+        <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1>Form Pengisian Data Mahasiswa</h1></div>
+            <form method="POST" id="form_mahasiswa">
+                <label >NIM</label>
+                <input type="number" name="nim"><br>
+                <label>Nama</label>
+                <input type="text" name="nama"><br>
+                <label>prodi</label>
+                <input type="text" name="prodi"><br>
+                <label>angkatan</label>
+                <input type="text" name="angkatan"><br>
+            </form>
+            <button id="btn_tampil">tampilkan</button>
+            <hr>
+            <div id="tampil_data"></div>
+        <script>
+            $(document).ready(function(){
+                $('#tampil_data').load("tampil.php");
+                $('#btn_tampil').click(function(){
+                    var data = $('#form_mahasiswa').serialize();
+                    $.ajax({
+                        type : 'POST',
+                        url : "tambah.php",
+                        data: data,
+                        cache : false,
+                        success : function(data){
+                            $('#tampil_data').load("tampil.php");
+                        }
+                    });
+                });
+            });
+            </script>
+    </body>
+</html>
