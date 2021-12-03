@@ -20,3 +20,7 @@ jangan lupa tambahkan hasil screenshoot web di dalam file
 Nama  : Gilang Ashari Abimanyu
 <br>
 NIM   : 119140040
+
+Hasil modifikasi :
+1.Merubah tampilan pada menu login
+2.Merapikan kodingan menjadi lebih sedikit
